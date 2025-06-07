@@ -1,0 +1,26 @@
+
+/* Night Mode Theme */
+body.night-mode {
+  background-color: #0e1a26;
+  color: #f0f0f0;
+}
+
+body.night-mode .footer-art {
+  background: linear-gradient(to top, #1e2e3e 0%, #3a4e5c 100%);
+}
+
+body.night-mode .svg-mountain path {
+  fill: #3d5a40;
+}
+
+body.night-mode .sun-layer {
+  display: none;
+}
+
+body.night-mode .cloud-layer {
+  opacity: 0.4;
+}
+
+body.night-mode .sky-scene {
+  filter: brightness(0.8);
+}

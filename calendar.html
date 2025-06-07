@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Calendar | Adrian's Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css" />
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css' rel='stylesheet' />
+</head>
+<body>
+  <header class="container">
+    <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Logo" class="site-logo" />
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trips.html">Trips</a></li>
+        <li><a href="/booking.html">Booking</a></li>
+        <li><a href="/calendar.html" class="active">Calendar</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Adventure Trip Calendar</h1>
+    <p>Explore past and upcoming trips with Adrian. Tap on an event to view details or book your own journey.</p>
+
+    <div id='calendar'></div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian's Backcountry Adventures</p>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,listMonth'
+        },
+        events: [
+          {
+            title: 'Mount Whitney Summit',
+            start: '2025-06-20',
+            end: '2025-06-24',
+            url: '/trips.html#whitney'
+          },
+          {
+            title: 'Grand Staircase Adventure',
+            start: '2025-07-08',
+            end: '2025-07-15',
+            url: '/trips.html#escalante'
+          },
+          {
+            title: 'Eastern Sierra Lakes Loop',
+            start: '2025-08-05',
+            url: '/trips.html#sierra'
+          },
+          // Add more entries as needed
+        ]
+      });
+      calendar.render();
+    });
+  </script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+</body>
+</html>

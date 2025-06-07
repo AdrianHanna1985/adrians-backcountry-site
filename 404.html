@@ -1,1 +1,51 @@
-<!-- 404.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Adrian’s Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css" />
+</head>
+<body>
+  <header class="container">
+    <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Adrian’s Logo" class="site-logo" />
+    <button id="themeToggle" class="theme-toggle">🌙 Night Mode</button>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/trips.html">Trips</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container center-text">
+    <section class="hero">
+      <h1>404 – Trail Not Found 🧭</h1>
+      <p>The page you’re looking for may have wandered off the trail.</p>
+      <a href="/index.html" class="button">⛰️ Return to Basecamp</a>
+    </section>
+
+    <section class="footer-art">
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" class="svg-mountain">
+        <path d="M0 50 L25 10 L50 40 L75 15 L100 50 Z" fill="#556B2F">
+          <animate attributeName="d" dur="6s" repeatCount="indefinite"
+            values="M0 50 L25 10 L50 40 L75 15 L100 50 Z;
+                    M0 50 L25 12 L50 38 L75 18 L100 50 Z;
+                    M0 50 L25 10 L50 40 L75 15 L100 50 Z" />
+        </path>
+      </svg>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian’s Backcountry Adventures</p>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+</body>
+</html>
+

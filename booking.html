@@ -1,1 +1,101 @@
-<!-- booking.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Trip | Adrian's Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+<body>
+  <header class="container">
+    <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Logo" class="site-logo" />
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trips.html">Trips</a></li>
+        <li><a href="/booking.html" class="active">Booking</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Book Your Adventure</h1>
+    <p>Fill out the form below to reserve your backcountry expedition.</p>
+
+    <form action="#" method="POST" class="booking-form">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="tripType">Trip Type:</label>
+      <select id="tripType" name="tripType" required>
+        <option value="">-- Select a Trip --</option>
+        <option value="sierra">Sierra Nevada Backpacking</option>
+        <option value="southwest">American Southwest Road Trip</option>
+        <option value="custom">Custom Adventure</option>
+      </select>
+
+      <label for="startDate">Start Date:</label>
+      <input type="text" id="startDate" name="startDate" class="datepicker" required />
+
+      <label for="endDate">End Date:</label>
+      <input type="text" id="endDate" name="endDate" class="datepicker" required />
+
+      <label for="notes">Additional Notes or Preferences:</label>
+      <textarea id="notes" name="notes" rows="5"></textarea>
+
+      <button type="submit">Submit Booking Request</button>
+    </form>
+
+    <section class="calendar-preview">
+      <h2>Trip Calendar Preview</h2>
+      <p>This calendar reflects trip availability. The following dates are currently <strong>unavailable</strong>:</p>
+      <ul>
+        <li>June 17, 2025 – Fully booked</li>
+        <li>July 4, 2025 – Holiday closure</li>
+        <li>August 10–14, 2025 – Annual Sierra Summit</li>
+      </ul>
+    </section>
+
+    <section class="booking-enhancements">
+      <h2>Optional Enhancements</h2>
+      <ul>
+        <li>✅ Interactive date picker using Flatpickr</li>
+        <li>🗓️ Calendar availability grid with disabled dates</li>
+        <li>💲 Auto price estimator (per trip type + days) – coming soon</li>
+        <li>📤 Export to iCal or sync with Google Calendar – future upgrade</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian's Backcountry Adventures</p>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr(".datepicker", {
+      minDate: "today",
+      dateFormat: "Y-m-d",
+      disable: [
+        "2025-06-17",
+        "2025-07-04",
+        {
+          from: "2025-08-10",
+          to: "2025-08-14"
+        }
+      ]
+    });
+  </script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+</body>
+</html>
+

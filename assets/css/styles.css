@@ -274,3 +274,19 @@ form button:hover {
   background-color: #F4F1ED;
   padding-top: 1rem;
 }
+.footer-art {
+  margin-top: 2rem;
+  text-align: center;
+  background: linear-gradient(to top, #87ceeb 0%, #e0f7ff 100%);
+  padding: 2rem 0 0 0;
+  position: relative;
+}
+
+.svg-mountain {
+  width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  animation-timing-function: ease-in-out;
+  background: transparent;
+}

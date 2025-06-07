@@ -1,1 +1,107 @@
-<!-- contact.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Adrian's Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css" />
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+  <style>
+    .contact-background {
+      background: url('/assets/images/adrian\'s-backcountry-adventures-logo.png') center center no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+      background-color: #fff;
+      opacity: 0.04;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 2rem;
+      border-radius: 8px;
+      z-index: 1;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-background"></div>
+
+  <header>
+    <div class="container">
+      <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Site logo" class="site-logo" />
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/trips.html">Trips</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/calendar.html">Calendar</a></li>
+          <li><a href="/contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h1>Get in touch</h1>
+    <form id="contactForm" action="#" method="POST" novalidate>
+      <div class="input-group">
+        <label for="first-name">Name <span>(required)</span></label>
+        <input type="text" id="first-name" name="first-name" required placeholder="First Name" />
+        <input type="text" id="last-name" name="last-name" required placeholder="Last Name" />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email <span>(required)</span></label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+      </div>
+
+      <div class="input-group">
+        <label for="message">Message <span>(required)</span></label>
+        <textarea id="message" name="message" required placeholder="Tell me about your adventure..." rows="6"></textarea>
+      </div>
+
+      <!-- Honeypot field for spam bots -->
+      <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+
+      <button type="submit" class="btn-primary">Let's grow!</button>
+      <p id="formResponse" class="form-response" role="alert" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian's Backcountry Adventures</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formResponse = document.getElementById("formResponse");
+
+      // Honeypot check
+      if (form.website.value !== "") {
+        formResponse.textContent = "Spam detected. Submission blocked.";
+        return;
+      }
+
+      // Simulate success
+      form.reset();
+      formResponse.textContent = "Thank you! Your message has been sent.";
+      formResponse.style.color = "green";
+    });
+  </script>
+</body>
+</html>
+

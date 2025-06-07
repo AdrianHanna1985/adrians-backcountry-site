@@ -222,3 +222,41 @@ form button:hover {
     margin: 1rem 0;
   }
 }
+/* Responsive Navigation */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #2E2E2E;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1001;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #FAF3E0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+}

@@ -1,1 +1,69 @@
-<!-- client-portal.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Portal | Adrian's Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css" />
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Site logo" class="site-logo" />
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/trips.html">Trips</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/calendar.html">Calendar</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/client-portal.html" class="active">Client Portal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="client-login">
+      <h1>Client Portal</h1>
+      <p>Welcome to the secure client portal. Please log in to view your custom itinerary, upload documents, and communicate directly with Adrian.</p>
+
+      <form class="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Log In</button>
+      </form>
+    </section>
+
+    <section class="portal-features">
+      <h2>What You Can Do Here</h2>
+      <ul>
+        <li>🔐 Access your personalized trip dashboard</li>
+        <li>📄 Download trip details, packing lists, and forms</li>
+        <li>📤 Upload signed waivers and documents</li>
+        <li>🗓️ Sync with your travel calendar</li>
+        <li>💬 Message Adrian directly with questions or updates</li>
+      </ul>
+    </section>
+
+    <section class="support">
+      <h2>Need Help?</h2>
+      <p>If you’ve forgotten your login or need assistance, please <a href="/contact.html">contact Adrian</a> directly. We're here to make your adventure smooth and stress-free!</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian's Backcountry Adventures</p>
+  </footer>
+</body>
+</html>
+

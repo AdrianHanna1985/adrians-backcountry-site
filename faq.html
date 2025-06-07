@@ -1,1 +1,164 @@
-<!-- faq.html content goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Adrian's Backcountry Adventures</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css">
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/theme-toggle.js" defer></script>
+  <style>
+    body {
+      background: linear-gradient(#cceeff, #ffffff);
+      background-attachment: fixed;
+    }
+    .faq-section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 0.5rem;
+    }
+    .faq-question.active + .faq-answer {
+      display: block;
+    }
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('/assets/images/50969b98-f523-4911-9521-19e04c7ec62b.JPG') no-repeat center center;
+      background-size: cover;
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <div class="container">
+      <img src="/assets/images/adrian's-backcountry-adventures-logo.png" alt="Site logo" class="site-logo">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/trips.html">Trips</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/calendar.html">Calendar</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container faq-section">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">1. What is included in an expedition trip?</div>
+      <div class="faq-answer">Each trip includes route planning, local transportation, group camping gear, experienced guides, and optional add-ons.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">2. What skill level is required?</div>
+      <div class="faq-answer">We offer beginner, intermediate, and advanced trips. Check each listing or contact us for recommendations.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">3. Do you provide gear?</div>
+      <div class="faq-answer">We provide shared equipment (tents, stoves, filters). Bring your own sleeping bag, pack, and clothes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">4. How do I prepare physically?</div>
+      <div class="faq-answer">Train with loaded hikes, elevation gain, and cardio. We’ll send you a fitness prep checklist.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">5. What’s your refund policy?</div>
+      <div class="faq-answer">Cancel 30+ days prior for a full refund. 15–29 days gets 50%. Less than 14 days is non-refundable.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">6. Can I bring my kids?</div>
+      <div class="faq-answer">We offer family-friendly options! Minimum age and experience vary by trip.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">7. Are pets allowed?</div>
+      <div class="faq-answer">Unfortunately no, due to wildlife safety and park regulations.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">8. What if the weather is bad?</div>
+      <div class="faq-answer">We run rain or shine unless there’s a dangerous weather alert (lightning, wildfire, floods).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">9. How large are the groups?</div>
+      <div class="faq-answer">Trips range from 4–10 participants for a personalized and safe experience.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">10. What should I pack?</div>
+      <div class="faq-answer">We provide a gear list and recommendations for each specific trip via email after booking.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">11. What if I have medical conditions?</div>
+      <div class="faq-answer">Please disclose all medical concerns beforehand. We’ll help determine trip suitability.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">12. Are meals provided?</div>
+      <div class="faq-answer">Most trips include group-prepared breakfasts and dinners. Bring your own snacks/lunches.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">13. Can I join solo?</div>
+      <div class="faq-answer">Absolutely! Many adventurers come solo and leave with lifelong friends.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">14. Where do we sleep?</div>
+      <div class="faq-answer">We camp in designated wilderness areas or official campgrounds. All sites are vetted.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">15. How do you ensure safety?</div>
+      <div class="faq-answer">Guides are trained in wilderness first aid, satellite communication, and local emergency protocols.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">16. Can I get cell service?</div>
+      <div class="faq-answer">Most backcountry areas have no signal. Guides carry emergency satellite communicators.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">17. Do you offer private/custom trips?</div>
+      <div class="faq-answer">Yes! We can design a custom route and experience tailored for your group’s needs and timeframe.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">18. Are there discounts?</div>
+      <div class="faq-answer">Returning guests, students, and early bookers get discounts. Ask about group rates too!</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">19. What about wildlife?</div>
+      <div class="faq-answer">We teach Leave No Trace, bear safety, and food storage. Wildlife sightings are part of the experience.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">20. Can I get more info?</div>
+      <div class="faq-answer">Visit our <a href="/contact.html">contact page</a> or <a href="/calendar.html">calendar</a> to view upcoming trips and send questions.</div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2025 Adrian's Backcountry Adventures</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

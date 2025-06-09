@@ -404,5 +404,40 @@ L.marker([36.600914, -118.061592]).addTo(map).bindPopup("<b>20211002_160214.jpg<
 L.marker([36.600922, -118.061606]).addTo(map).bindPopup("<b>20211002_160229.jpg</b><br><img src='assets/images/Lone Pine & Cottonwood Area 2021/20211002_160229.jpg' width='150'>");
 L.marker([36.600917, -118.061586]).addTo(map).bindPopup("<b>20211002_160822.jpg</b><br><img src='assets/images/Lone Pine & Cottonwood Area 2021/20211002_160822.jpg' width='150'>");
 </script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([36.6, -118.1], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a>'
+  }).addTo(map);
+
+  const markers = [
+    {
+      lat: 36.595,
+      lng: -118.062,
+      title: "Start of Scenic Route",
+      image: "assets/images/Lone Pine & Cottonwood Area 2021/20210821_151654.jpg"
+    },
+    {
+      lat: 36.607,
+      lng: -118.065,
+      title: "Midway Point",
+      image: "assets/images/Lone Pine & Cottonwood Area 2021/20210823_122837.jpg"
+    },
+    {
+      lat: 36.610,
+      lng: -118.063,
+      title: "Cottonwood Camp",
+      image: "assets/images/Lone Pine & Cottonwood Area 2021/20211002_160229.jpg"
+    }
+    // 🔧 Add more markers here as needed
+  ];
+
+  markers.forEach(marker => {
+    L.marker([marker.lat, marker.lng]).addTo(map)
+      .bindPopup(`<strong>${marker.title}</strong><br><img src="${marker.image}" width="150">`);
+  });
+</script>
 </body>
 </html>
